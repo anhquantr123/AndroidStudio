@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activiti_drawLayout"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/main_appbar"></include>
+
+        <EditText
+            android:id="@+id/activity_inputAddpost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/input_post_add"
+            android:hint=" Hôm nay bạn thấy thế nào?"
+            android:paddingStart="40dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar" />
+
+        <ImageView
+            android:id="@+id/addImagePost"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_inputAddpost"
+            app:layout_constraintStart_toStartOf="@+id/activity_inputAddpost"
+            app:layout_constraintTop_toTopOf="@+id/activity_inputAddpost"
+            app:srcCompat="@drawable/ic_image_add_post" />
+
+        <ImageView
+            android:id="@+id/ac_send_post_imgae"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_inputAddpost"
+            app:layout_constraintEnd_toEndOf="@+id/activity_inputAddpost"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar"
+            app:layout_constraintVertical_bias="0.65999997"
+            app:srcCompat="@drawable/send" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ac_recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/colorGray"
+            app:layout_constraintTop_toBottomOf="@+id/activity_inputAddpost" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/draw_menu"
+        android:id="@+id/activity_navView"/>
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
