@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/firt">
+        <item android:id="@+id/profile"
+            android:title="Trang Cá Nhân"
+            android:icon="@drawable/ic_person"/>
+
+        <item android:id="@+id/firend"
+            android:title="Bạn Bè"
+            android:icon="@drawable/ic_my_friend"/>
+
+        <item android:id="@+id/find_friend"
+            android:title="Thêm Bạn Bè"
+            android:icon="@drawable/ic_add_friend"/>
+
+        <item android:id="@+id/chat"
+            android:title="Tin Nhắn"
+            android:icon="@drawable/ic_tin_nhan"/>
+        <item android:id="@+id/about"
+            android:title="Giới Thiệu"
+            android:icon="@drawable/ic_about_app"/>
+    </group>
+    <group android:id="@+id/drawer_second">
+        <item android:id="@+id/logout"
+            android:title="Đăng Xuất"
+            android:icon="@drawable/ic_loout"/>
+
+    </group>
+</menu>
